@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+            const result = {
+             "results" : [
+                {
+                   "formatted_address" : "Velachery, Chennai, Tamil Nadu, India",
+                   "geometry" : {
+                      "bounds" : {
+                         "northeast" : {
+                            "lat" : 12.997241,
+                            "lng" : 80.233524
+                         },
+                         "southwest" : {
+                            "lat" : 12.960916,
+                            "lng" : 80.2029124
+                         }
+                      },
+                      "location" : {
+                         "lat" : 12.975971,
+                         "lng" : 80.22120919999999
+                      },
+                      "location_type" : "APPROXIMATE",
+                      "viewport" : {
+                         "northeast" : {
+                            "lat" : 12.997241,
+                            "lng" : 80.233524
+                         },
+                         "southwest" : {
+                            "lat" : 12.960916,
+                            "lng" : 80.2029124
+                         }
+                      }
+                   },
+                   "place_id" : "ChIJO1oG8p9dUjoRzDhAYBVQQ2Y",
+                   "types" : [ "political", "sublocality", "sublocality_level_1" ]
+                }
+             ],
+             "status" : "OK"
+          };
+        
+           
+      var address = result.results[0].formatted_address;
+      console.log(address);
+
+     var geometry = result.results[0].geometry;
+
+
+
+var boundsNElat = geometry.bounds.northeast.lat;
+console.log(boundsNElat);
+var boundsNElng = result.results[0].geometry.bounds.northeast.lng;
+console.log(boundsNElng);
+
+
+var boundsSWlat = result.results[0].geometry.bounds.southwest.lat;
+console.log(boundsSWlat);
+var boundsSWlng = result.results[0].geometry.bounds.southwest.lng;
+console.log(boundsSWlng);
+
+var locationLat = result.results[0].geometry.location.lat;
+console.log(locationLat);
+var locationLng = result.results[0].geometry.location.lng;
+console.log(locationLng);
+
+var locationType = geometry.location_type;
+console.log(locationType);
+
+var viewportNElat =result.results[0].geometry.viewport.northeast.lat; 
+console.log(viewportNElat);
+
+var viewportNElng =result.results[0].geometry.viewport.northeast.lng; 
+console.log(viewportNElng);
+ 
+const viewportSWlat =result.results[0].geometry.viewport.southwest.lat; 
+console.log(viewportSWlat);
+
+const placeId = result.results[0].place_id;
+console.log(placeId);
+
+const types = result.results[0].types;
+console.log(types);
+
+const types1 = result.results[0].types[0];
+console.log(types1);
+const types2 = result.results[0].types[1];
+console.log(types2);
+const types3 = result.results[0].types[2];
+console.log(types3);
+
+const status = result.status;
+ console.log(status);
+      
+ </script>
+
+          
+</head>
+<body>
+   <button >hai</button>
+</body>
+</html>
